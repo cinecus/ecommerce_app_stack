@@ -64,9 +64,9 @@ $ docker compose up -d
 
 ## PORT SERVICE
 
-- front-end - [localhost:3000]
-- back-end - [localhost:5000]
-- mongoDB - [localhost:5001]
-- elasticsearch - [localhost:9200]
-- logstash - [localhost:8080] , [localhost:8081]
-- kibana - [localhost:5601]
+- front-end - [http://localhost:3000](http://localhost:3000)
+- back-end - [http://localhost:5000](http://localhost:5000)
+- mongoDB - [http://localhost:5001](http://localhost:5001)
+- elasticsearch - [http://localhost:9200](http://localhost:9200)
+- logstash - [http://localhost:8080](http://localhost:8080) , [http://localhost:8081](http://localhost:8081)
+- kibana - [http://localhost:5601](http://localhost:5601)
