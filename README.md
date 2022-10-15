@@ -4,6 +4,7 @@ web-app ecommerce docker container
 
 ## env file
 
+### .env
 ```env:.env
 #PORT
 PORT=5000
@@ -46,7 +47,7 @@ SENDGRID_API_KEY={YOUR_SENDGRID_API_KEY}
 FRONTEND_URI=http://localhost:3000
 
 ```
-
+### .env.local
 ```env:.env.local
 NEXT_PUBLIC_BACKEND_URI='http://api:5000'
 NEXT_PUBLIC_TOKEN_NAME='accessToken'
