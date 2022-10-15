@@ -1,0 +1,129 @@
+[{
+  "_id": {
+    "$oid": "6313110c7c912ed0325ea43a"
+  },
+  "name": "camera A",
+  "price": 1400,
+  "image": "https://res.cloudinary.com/cinecus/image/upload/v1647622511/redux-cart/paul-gaudriault-cwy9yVBBPxg-unsplash_nsalul.jpg",
+  "tags": [
+    "new"
+  ]
+},{
+  "_id": {
+    "$oid": "6313110c7c912ed0325ea43b"
+  },
+  "name": "camera B",
+  "price": 1450,
+  "image": "https://res.cloudinary.com/cinecus/image/upload/v1647622498/redux-cart/andrew-draper-lFnMKEZT4zk-unsplash_wbqark.jpg",
+  "tags": [
+    "new",
+    "suggest"
+  ]
+},{
+  "_id": {
+    "$oid": "6313110c7c912ed0325ea43c"
+  },
+  "name": "camera C",
+  "price": 1600,
+  "image": "https://res.cloudinary.com/cinecus/image/upload/v1647622433/redux-cart/julius-drost-dS-q7-zkD9c-unsplash_lua1oj.jpg",
+  "tags": [
+    "new"
+  ]
+},{
+  "_id": {
+    "$oid": "6313110c7c912ed0325ea43d"
+  },
+  "name": "camera D",
+  "price": 1500,
+  "image": "https://res.cloudinary.com/cinecus/image/upload/v1647622428/redux-cart/theregisti-HSXIp58yPyI-unsplash_qqcd87.jpg",
+  "tags": [
+    "bestseller"
+  ]
+},{
+  "_id": {
+    "$oid": "6313110c7c912ed0325ea43e"
+  },
+  "name": "camera E",
+  "price": 2000,
+  "image": "https://res.cloudinary.com/cinecus/image/upload/v1647622427/redux-cart/jakob-owens-esbfaHABh7Y-unsplash_zmddie.jpg",
+  "tags": [
+    "new"
+  ]
+},{
+  "_id": {
+    "$oid": "6313110c7c912ed0325ea43f"
+  },
+  "name": "camera F",
+  "price": 1800,
+  "image": "https://res.cloudinary.com/cinecus/image/upload/v1647622427/redux-cart/nordwood-themes-F3Dde_9thd8-unsplash_cnigmw.jpg",
+  "tags": [
+    "new"
+  ]
+},{
+  "_id": {
+    "$oid": "6313110c7c912ed0325ea440"
+  },
+  "name": "camera G",
+  "price": 1450,
+  "image": "https://res.cloudinary.com/cinecus/image/upload/v1647622426/redux-cart/alexander-andrews-soLEw77Napo-unsplash_xnglgt.jpg",
+  "tags": [
+    "bestseller"
+  ]
+},{
+  "_id": {
+    "$oid": "6313110c7c912ed0325ea441"
+  },
+  "name": "camera H",
+  "price": 1500,
+  "image": "https://res.cloudinary.com/cinecus/image/upload/v1647622426/redux-cart/ethan-hoover-vasU4-TlC5I-unsplash_h1rgvd.jpg",
+  "tags": [
+    "new",
+    "suggest"
+  ]
+},{
+  "_id": {
+    "$oid": "6313110c7c912ed0325ea442"
+  },
+  "name": "camera I",
+  "price": 1650,
+  "image": "https://res.cloudinary.com/cinecus/image/upload/v1647622426/redux-cart/william-thomas-ny6tO4ItOEY-unsplash_umhzhb.jpg",
+  "tags": [
+    "new"
+  ]
+},{
+  "_id": {
+    "$oid": "6313110c7c912ed0325ea443"
+  },
+  "name": "camera J",
+  "price": 1800,
+  "image": "https://res.cloudinary.com/cinecus/image/upload/v1647622425/redux-cart/graham-mansfield-wp9ggFHgsAI-unsplash_mhbitt.jpg",
+  "tags": [
+    "new"
+  ]
+},{
+  "_id": {
+    "$oid": "6313110c7c912ed0325ea444"
+  },
+  "name": "camera K",
+  "price": 1200,
+  "image": "https://res.cloudinary.com/cinecus/image/upload/v1647622424/redux-cart/olena-sergienko-9-uSCnBaVGU-unsplash_xonf4s.jpg",
+  "tags": [
+    "suggest"
+  ]
+},{
+  "_id": {
+    "$oid": "63143ce190551fff9fc36745"
+  },
+  "name": "Camera TEST",
+  "price": 1500,
+  "image": "https://res.cloudinary.com/cinecus/image/upload/v1647622498/redux-cart/andrew-draper-lFnMKEZT4zk-unsplash_wbqark.jpg",
+  "tags": [
+    "new"
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1662295889479"
+    }
+  },
+  "__v": 0
+}]

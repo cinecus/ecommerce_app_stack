@@ -1,0 +1,101 @@
+version: '3.8'
+services:
+  web:
+    container_name: ecommerce_frontend
+    image: cinecus/ecommerce_frontend
+    env_file:
+      .env.local
+    depends_on:
+      - api
+    ports:
+      - 3000:3000
+    networks:
+      - ecommerce
+  api:
+    image: cinecus/ecommerce_api
+    env_file:
+      .env
+    ports:
+      - 5000:5000
+    networks:
+      - ecommerce
+    volumes:
+      - app-volume:/usr/src/app/log
+  db:
+    container_name: ecommerce_mongo
+    image: mongo:4.4
+    ports:
+      - 5001:27017
+    env_file:
+      .env
+    volumes:
+      - ./init-mongo.sh:/docker-entrypoint-initdb.d/init-mongo.sh
+      - ./db:/data/db
+    networks:
+      - ecommerce
+  mongo-seed:
+    build: ./mongo-seed
+    depends_on:
+      - db
+    networks:
+      - ecommerce
+  # nginx:
+  #   image: nginx:latest
+  #   volumes:
+  #     - ./conf.d:/etc/nginx/conf.d
+  #   depends_on:
+  #     - api
+  #   ports:
+  #     - 5000:3000
+  #   networks:
+  #     - ecommerce
+  elasticsearch:
+    container_name: elasticsearch
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.14.0
+    environment: 
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+    ports: 
+      - 9200:9200
+    volumes: 
+      - ./data:/usr/share/elasticsearch/data
+    networks:
+      - ecommerce
+  logstash:
+    container_name: logstash
+    image: docker.elastic.co/logstash/logstash:7.14.0
+    environment:
+      - config.reload.automatic=true
+    ports:
+      - 8080:8080
+      - 8081:8081
+    depends_on:
+      - elasticsearch
+    volumes:
+      - ./logstash/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+    networks:
+      - ecommerce
+  filebeat:
+    image: docker.elastic.co/beats/filebeat:6.2.2
+    command: filebeat -e -strict.perms=false
+    volumes:
+      - ./filebeat/config/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
+      # - ./log:/usr/share/filebeat/logs:ro
+      - app-volume:/usr/share/filebeat/logs:ro
+    networks:
+      - ecommerce
+    depends_on:
+      - logstash
+  kibana:
+    container_name: kibana
+    image: docker.elastic.co/kibana/kibana:7.14.0
+    environment:
+      - elasticsearch.hosts=http://localhost:9200
+    ports: 
+      - 5601:5601
+    networks:
+      - ecommerce
+networks:
+  ecommerce:
+volumes:
+  app-volume:
